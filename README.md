@@ -4,7 +4,7 @@ Stream เป็นเครื่องมือในการจัดกา�
 
 ```
 int arr[] = {1,2,3,4,5};         int arr[] = {1,2,3,4,5};
-int result = 0;                 
+int result = 0;                  int result = List.of(arr).stream().filtter(e -> e > 5).sum();
 for(i=0;i<arr.length;i++){
     int arrValue = arr[i];
     if(arrValue > 5){
