@@ -37,11 +37,10 @@ System.out.println(lst);
 [9, 10, 10, 11, 21, 21]
 ```
 
-สำหรับ stream จะขอพูดใน 3 เรื่องคือ
+สำหรับ stream จะขอพูดใน 2 เรื่องคือ
 
 * การสร้าง stream
 * การใช้งาน intermediate operations
-* การใช้งาน stream เหมือน sql
 
 ## การสร้าง stream
 
@@ -165,7 +164,3 @@ Stream s8 = Stream.of(1, 2, 3, 4, 5, 6)
 ```
 [10, 20, 30, 40, 50, 60]
 ```
-
-## การใช้งาน stream เหมือน sql
-
-อ้างอิง
