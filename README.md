@@ -84,7 +84,17 @@ int arr [] = IntStream.rangeClosed(1, 10).toArray();
 ```
 
 ## การใช้งาน intermediate operations
-เป็นการจัดการข้อมูลตร
+เป็นการจัดการข้อมูลโดยมีคำสั่งดังนี้ filter, limit, skip, distinct, sorted, map, flatmap ผู้ใช้สามารถใช้มากกว่า 1 คำสั่งต่อกันได้
+```
+Stream s8 = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+                .filter(e -> e > 2)
+                .limit(5);
+System.out.println(Arrays.toString(s8.toArray()));                
+```
+s8 จะเป็น stream ซึ่งจำกัดแค่ 5 จำนวน โดยค่าจะมากกว่า 2
+```
+[3, 4, 5, 6, 7]
+```
 
 ## การใช้งาน stream เหมือน sql
 
