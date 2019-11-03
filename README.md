@@ -1,10 +1,10 @@
 # Java stream
 
-Stream เป็นเครื่องมือในการจัดการข้อมูลซึ่งมีประสิทธิภาพสูง สามารถกรอง(filter), เรียงลำดับ โดยจะเขียน code ได้สั้นลงมาก
-
+Stream เป็นเครื่องมือในการจัดการข้อมูลซึ่งมีประสิทธิภาพสูง สามารถกรอง(filter), เรียงลำดับ โดยจะเขียน code ได้สั้นลงมาก 
+จาก code ด้านล่างซึ่งเป็นการหาค่าผมรวมของ arr ซึ่งจากหาค่าที่มากกว่า 5 โดย code ด้านซ้ายและด้านขวาทำงานได้เหมือนกัน แต่ code ทางด้านขวาจะสั้นกว่าทางด้านซ้ายถึง 6 บรรทัด
 ```
-int arr[] = {1,2,3,4,5};         int arr[] = {1,2,3,4,5};
-int result = 0;                  int result = List.of(arr).stream().filtter(e -> e > 5).sum();
+int arr[] = {1,2,3,6,7};         int arr[] = {1,2,3,6,7};
+int result = 0;                  int result = IntStream.of(arr).filter(e -> e > 5).sum();
 for(i=0;i<arr.length;i++){
     int arrValue = arr[i];
     if(arrValue > 5){
