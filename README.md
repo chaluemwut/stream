@@ -1,6 +1,18 @@
 # Java stream
 
 Stream เป็นเครื่องมือในการจัดการข้อมูลซึ่งมีประสิทธิภาพสูง สามารถกรอง(filter), เรียงลำดับ โดยจะเขียน code ได้สั้นลงมาก
+
+```
+int arr[] = {1,2,3,4,5};         int arr[] = {1,2,3,4,5};
+int result = 0;                 
+for(i=0;i<arr.length;i++){
+    int arrValue = arr[i];
+    if(arrValue > 5){
+        result = result+arr[i];
+    }
+}
+```
+
 Stream เริ่มมีครั้งแรกใน Java 8 ผู้เขียนได้อ่านบทความจาก [dzone](www.dzone.com) เรื่อง [Become a Master of Java Streams](https://dzone.com/articles/become-a-master-of-java-streams-part-1-creating-st)
 เลยอยากเขียนเป็นของเราเอง(อยากเขียนมานานมาก) ซึ่งไม่ได้เป็นการแปลแต่อย่างใด การเขียนหรือการสอนบุคคลอื่นจะ
 ทำให้ความรู้ของเราเรื่องนั้นมีความเข้าใจยิ่งขึ้น
