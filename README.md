@@ -37,9 +37,10 @@ System.out.println(lst);
 [9, 10, 10, 11, 21, 21]
 ```
 
-สำหรับ stream จะขอพูดใน 2 เรื่องคือ
+สำหรับ stream จะขอพูดใน 3 เรื่องคือ
 
 * การสร้าง stream
+* การใช้งาน intermediate operations
 * การใช้งาน stream เหมือน sql
 
 ## การสร้าง stream
@@ -73,10 +74,16 @@ DoubleStream
 การสร้าง stream ด้วย  Stream source แบบนี้จะทำให้จาวาสามารถสร้าง array ในลักษณะต่างได้อย่างง่ายดายเช่น array ของเลขสุ่มขนาด 10 ตัว, array ของเลข 1 ถึง 9 เป็นต้น
 การสร้าง stream ด้วย Stream source สามารถทำได้ดัง code ด้านล่าง
 ```
-
+IntStream s5 = IntStream.range(0, 10);
+LongStream s6 = LongStream.rangeClosed(0, 10);
+DoubleStream s7 = new Random().doubles(10, 10, 100); //สร้างเลขสุ่ม 10 ตัว มีค่า 10 ถึง 100
+```
+การเปลี่ยน Stream source เป็น array สามารถทำได้โดยใช้ toArray()
+```
+int arr [] = IntStream.rangeClosed(1, 10).toArray();
 ```
 
-## intermediate operations
+## การใช้งาน intermediate operations
 เป็นการจัดการข้อมูลตร
 
 ## การใช้งาน stream เหมือน sql
